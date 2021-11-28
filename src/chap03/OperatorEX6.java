@@ -5,6 +5,6 @@ public class OperatorEX6 {
         byte a = 10;
         byte b = 20;
         byte c = (byte)(a + b);
-        System.out.println(c);
+        System.out.println(c+"\n실험");
     }
 }
