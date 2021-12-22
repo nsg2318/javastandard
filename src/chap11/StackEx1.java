@@ -1,21 +1,35 @@
 package chap11;
 
+import java.util.Comparator;
+import java.util.LinkedList;
 import java.util.Stack;
 
 public class StackEx1 {
   public static Stack back = new Stack();
   public static Stack forward = new Stack();
 
+
+
   public static void main(String[] args) {
+
+    Integer a =25;
+    Integer b =22;
+
     goURL("1.네이트");
     goURL("2.야후");
     goURL("3.네이버");
     goURL("4.다음");
     goURL("5.카카오");
 
+    int c = a.compareTo(b);
+    System.out.println("===================");
+    System.out.println(c);
+    System.out.println("===================");
+    int d = Integer.compare(a,b);
+
     printStatus();
 
-    
+
   }
 
   private static void printStatus() {
@@ -30,5 +44,11 @@ public class StackEx1 {
     if(!forward.empty())
       forward.clear();
   }
+
+
+
+
+
+
 
 }
