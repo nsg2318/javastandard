@@ -1,13 +1,27 @@
 package chap12;
 
+import java.util.ArrayList;
+
 public class Box<T> {
-    T item;
+  T item;
+  ArrayList<T> list = new ArrayList<T>();
+  void add(T item){
+      list.add(item);
+  }
 
-    public T getItem() {
-        return item;
-    }
+  T get(int i) {
+      return list.get(i);
+  }
 
-    public void setItem(T item) {
-        this.item = item;
-    }
+  ArrayList<T> getList() {
+      return list;
+  }
+
+  int size() {
+      return list.size();
+  }
+
+  public String toString() {
+      return list.toString();
+  }
 }
