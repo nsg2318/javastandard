@@ -3,25 +3,25 @@ package chap12;
 
 class Fruit {
   public String toString() {
-    return "Fruit";
+    return "Fruit!";
   }
 }
 
 class Apple extends Fruit {
   public String toString() {
-    return "Apple";
+    return "Apple!";
   }
 }
 
 class Grape extends Fruit {
   public String toString() {
-    return "Grape";
+    return "Grape!";
   }
 }
 
 class Toy {
   public String toString() {
-    return "Toy";
+    return "Toy!";
   }
 }
 
@@ -34,5 +34,13 @@ public class FruitBoxEx1 {
 
     fruitBox.add(new Fruit());
     fruitBox.add(new Apple());
+    appleBox.add(new Apple());
+    appleBox.add(new Apple());
+
+    toyBox.add(new Toy());
+
+    System.out.println(fruitBox);
+    System.out.println(appleBox);
+    System.out.println(toyBox);
   }
 }
