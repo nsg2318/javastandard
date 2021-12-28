@@ -1,7 +1,6 @@
 package chap14;
 
 import java.util.ArrayList;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.UnaryOperator;
@@ -12,7 +11,7 @@ public class LambdaEx4 {
     for (int i = 0; i < 10; i++) {
       list.add(i);
     }
-
+    UnaryOperator<Integer> t = ab -> ab * 10;
     list.forEach(a -> System.out.print(a + ","));
     System.out.println();
     list.removeIf(x -> x % 2 == 0 || x % 3 == 0);
@@ -24,6 +23,7 @@ public class LambdaEx4 {
         return integer * 20;
       }
     });
+    list.replaceAll(t);
     System.out.println(list);
 
     Map<String, String> map = new HashMap<>();
