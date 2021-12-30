@@ -1,4 +1,4 @@
-package chap12;
+package chap12.ex1;
 
 
 public class Main {
