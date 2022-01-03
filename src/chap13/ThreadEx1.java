@@ -20,7 +20,6 @@ class ThreadEx1_1 extends Thread {
     }
   }
 }
-
 class ThreadEx1_2 implements Runnable {
   @Override
   public void run() {
