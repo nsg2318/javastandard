@@ -7,9 +7,11 @@ public class boj1043 {
       Scanner scanner = new Scanner(System.in);
       //사람의 수
       int playerNum = scanner.nextInt();
-      List<Boolean> knownPeople = new ArrayList<>();
+      List<Boolean> peopleBoolean = new ArrayList<>();
+      List<Integer> peopleId = new ArrayList<>();
       for (int i = 0; i < playerNum; i++) {
-        knownPeople.add(false);
+        peopleBoolean.add(false);
+        peopleId.add(i+1);
       }
 
       //파티의 수
@@ -33,16 +35,8 @@ public class boj1043 {
         totalPartyPeopleList.add(partyPeopleList);
       }
       System.out.println(totalPartyPeopleList);
+      System.out.println(peopleId);
       System.out.println(knownId);
-      int counter = 0;
-      for (Integer a : knownId) {
-        for (List<Integer> s : totalPartyPeopleList){
-          if(s.contains(a)){
-            counter++;
-          }
-        }
-      }
-      System.out.println(totalPartyPeopleList.size()-counter);
 
     }
   }
